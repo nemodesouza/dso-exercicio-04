@@ -21,3 +21,4 @@ class Autor:
     @nome.setter
     def nome(self, nome):
         self.__nome = nome
+
