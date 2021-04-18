@@ -8,8 +8,7 @@ class Capitulo:
         return self.__numero
 
     @numero.setter
-    def numero(self, numero: int):
-        if isinstance(numero, int):
+    def numero(self, numero):
             self.__numero = numero
 
     @property
@@ -17,5 +16,5 @@ class Capitulo:
         return self.__titulo
 
     @titulo.setter
-    def titulo(self, titulo: str):
+    def titulo(self, titulo):
         self.__titulo = titulo

@@ -9,7 +9,7 @@ class Editora:
 
     @codigo.setter
     def codigo(self, codigo):
-    self.__codigo = codigo
+        self.__codigo = codigo
 
     @property
     def nome(self):

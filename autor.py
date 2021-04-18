@@ -11,8 +11,8 @@ class Autor:
 
     @codigo.setter
     def codigo(self, codigo):
-        if isinstance(codigo, int)
-        self.__codigo = codigo
+        if isinstance(codigo, int):
+            self.__codigo = codigo
 
     @property
     def nome(self):
