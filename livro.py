@@ -9,13 +9,11 @@ class Livro:
         self.__titulo = titulo
         self.__ano = ano
         self.__editora = editora
-        self.__autor = []
-        self.__numero_capitulo = numero_capitulo
-        self.__titulo_capitulo = titulo_capitulo
-        self.__capitulos = []
-
         # Incluir o primeiro autor e o primeiro capitulo nas respectivas listas
-        ...
+        self.__autor = [Autor(codigo, nome)]
+        self.__capitulos = [Capitulo(numero_capitulo, titulo_capitulo)]
+
+
 
     @property
     def codigo(self):
@@ -42,7 +40,7 @@ class Livro:
         if isinstance(editora, Editora):
             self.__editora = editora
         else:
-            print('Insira uma editora correta')
+            print('Opa, essa não parece ser uma editora. Insira uma editora.')
 
     @property
     def autor(self):
@@ -57,38 +55,47 @@ class Livro:
     def incluir_autor(self, autor: Autor):
         #Nao esqueca de garantir que o objeto recebido pertence a classe Autor...
         if isinstance(autor, Autor):
-
         # Nao permitir insercao de Autores duplicados!
             if autor in self.__autor:
-                self.__autor.append(autor)
+                print('O(A) Autor(a) informado já está na lista.')
             else:
-                print('O(A) Autor(a) informado já está na lista')
+                self.__autor.append(autor)
+
 
     def excluir_autor(self, autor: Autor):
         if isinstance(autor, Autor):
             if autor in self.__autor:
                 self.__autor.pop(autor)
             else:
-                print('O(A) Autor(a) informado já inexiste na lista')
+                print('O(A) Autor(a) informado já inexiste na lista.')
 
 
     def incluir_capitulo(self, numero: int, titulo: str):
+
+        if isinstance(numero, int) and isinstance(titulo, str):
         #... Nao permitir insercao de Capitulos duplicados!
-        novo_capitulo = Capitulo(numero, titulo)
-        if novo_capitulo in self.__capitulos:
-            self.__capitulos.append(novo_capitulo)
-        else:
-            print("O capítulo informado já está inserido")
+            novo_capitulo = Capitulo(numero, titulo)
+            if novo_capitulo in self.__capitulos:
+                print("O capítulo informado já está inserido")
+            else:
+                self.__capitulos.append(novo_capitulo)
+                print(">>>>>CAP ADICIONADO>>>>>>")
+
 
     def excluir_capitulo(self, titulo: str):
 
         if isinstance(titulo, Capitulo.titulo):
-            self.__capitulos.pop(Capitulo.[titulo])
+            self.__capitulos.pop(Capitulo.titulo)
 
         else:
             print("O capítulo informado não pertence ao livro")
 
 
     def find_capitulo_by_titulo(self, titulo: str):
+        for titulo in capitulos:
+
+
+
+
 
 
